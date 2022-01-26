@@ -263,21 +263,21 @@ extern "C" {
 #[no_mangle]
 pub extern "C" fn __untrusted_gate_enter() {
     //unsafe { inc_gate_count(); }
-    mpk::pkrusafe_enter();
+    //mpk::pkrusafe_enter();
 }
 
 #[no_mangle]
 pub extern "C" fn __untrusted_gate_exit() {
     //unsafe { inc_gate_count(); }
-    mpk::pkrusafe_exit()
+    //mpk::pkrusafe_exit()
 }
 
 #[no_mangle]
 pub extern "C" fn __mpk_disable_access() {
-    mpk::pkrusafe_exit()
+    //mpk::pkrusafe_exit()
 }
 
 #[no_mangle]
 pub extern "C" fn __mpk_restore_access() {
-    mpk::pkrusafe_enter();
+    //mpk::pkrusafe_enter();
 }
